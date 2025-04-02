@@ -55,7 +55,7 @@ rl.on('line', (line) => {
   - 해결 방법: 입력받은 숫자를 자릿수로 나누어 array에 저장 후 내림차순 sort 후 배열을 다시 하나의 숫자로 merge
   - 핵심 로직: 숫자를 자릿수로 나누어 array에 저장하기.   ex) 123 -> [1,2,3].
               내림차순 정렬하고 다시 숫자 하나로 merge.   ex) [3,2,1] -> 321.
-```
+```node.js
   const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -88,7 +88,7 @@ rl.on('line', (line) => {
               2. 정렬된 array에서 ForEach로 Map 생성
               3. arr.map()을 사용하여 arr의 각 요소에 대해 resMap에서 index를 찾아 res array 생성
               4. 문제 조건에 맞게 결과 출력
-```
+```node.js
   const readline = require('readline');
 
 const rl = readline.createInterface({
