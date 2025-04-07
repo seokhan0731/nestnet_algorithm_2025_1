@@ -24,9 +24,14 @@ rl.on('line', (line) => {
 
 
 }).on('close', () => {
+<<<<<<< HEAD
   score.sort((a,b) => b-a);
 
   console.log(score[K - 1]);
 
+=======
+    score.sort((a,b) => b-a);
+    console.log(score[K - 1]);
+>>>>>>> db2506e4fea3d397006c17a2e5d3fdc6ed2612bf
   process.exit();
 });
