@@ -24,14 +24,9 @@ rl.on('line', (line) => {
 
 
 }).on('close', () => {
-    score.sort((a,b) => b-a);
+  score.sort((a,b) => b-a);
 
-    if (score.length >= K) {
-        console.log(score[K - 1]);
-    }
-    else {
-        console.log("점수가 부족합니다.");
-    }
+  console.log(score[K - 1]);
 
   process.exit();
 });
