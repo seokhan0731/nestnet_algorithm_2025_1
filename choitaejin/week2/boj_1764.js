@@ -8,9 +8,9 @@ const rl = readline.createInterface({
 let input = [];
 let N, K;
 let lineCnt = 0;
-let NotListen = new Set();
-let NotSee = [];
-let res =[];
+let NotListen = new Set(); // 듣도 못한사람 배열
+let NotSee = []; // 보도 못한사람 배열
+let res =[]; // 듣보잡 결과 배열
 
 rl.on('line', (line) => {
     input.push(line);
@@ -30,7 +30,7 @@ rl.on('line', (line) => {
 }).on('close', () => {
 
     for (let name of NotSee) {
-        if (NotListen.has(name)) { 
+        if (NotListen.has(name)) {  // 보도못한 사람배열에서 듣도못한 사람과의 교집합을 결과 배열에 push해줌
             res.push(name);
         }
     }
