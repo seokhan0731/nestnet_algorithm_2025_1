@@ -1,22 +1,26 @@
 #include <iostream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
-char arr[5][15];
-
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
+    vector<string> words(5);
 
-	for (int i = 0; i < 5; i++)
-		cin >> arr[i];
+    // 5줄 입력받기
+    for (int i = 0; i < 5; ++i) {
+        cin >> words[i];
+    }
 
-	for (int i = 0; i < 15; i++) {
-		for (int k = 0; k < 5; k++) {
-			if(arr[k][i] != NULL)
-				cout << arr[k][i];
-		}
-	}
+    // 세로로 읽기
+    for (int col = 0; col < 15; ++col) {
+        for (int row = 0; row < 5; ++row) {
+            if (col < words[row].length()) {
+                cout << words[row][col];
+            }
+        }
+    }
 
-	return 0;
+    cout << '\n';
+    return 0;
 }
